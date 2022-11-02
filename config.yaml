@@ -1,0 +1,39 @@
+---
+baseurl: "https://renwenshan.github.io"
+title: "RWS Write"
+theme: "zen"
+languageCode: "en-US"
+rssLimit: 36
+
+params:
+  cookieConsent: false
+  contact: "wenshan.ren@live.org"
+  copyright: "Copyright © 2022 Wenshan Ren"
+  dateformat: ""
+  description: "Wenshan Ren's Blog"
+  footer: ""
+  favicon: ""
+  icon: ""
+  image: ""
+  imageMaxWidth: "640"
+  jquery: true
+  logo: false
+  menuInHeader: true
+  mobileMenu: true
+  poweredby: false
+  realfavicongenerator: false
+  relatedposts: true
+  feedlinks: false
+  searchLimit: 1024
+  sidebar: true
+  submitted: true
+
+outputFormats:
+  SearchIndex:
+    mediaType: "application/json"
+    baseName: "searchindex"
+    isPlainText: true
+    notAlternative: true
+
+outputs:
+  home: ["HTML", "SearchIndex", "RSS"]

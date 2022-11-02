@@ -1,0 +1,19 @@
+#+hugo_base_dir: ./
+#+hugo_section: ./posts
+
+#+hugo_weight: auto
+#+hugo_auto_set_lastmod: t
+
+#+author: Wenshan Ren
+
+* Hack                                                                :@hack:
+** Testing Testing                                               :emacs:hugo:
+:PROPERTIES:
+:EXPORT_FILE_NAME: testing-testing
+:EXPORT_DATE: 2022-11-02
+:END:
+
+Hello World
+#+HTML: <!--more-->
+
+This is my first blog post with Emacs [[https://ox-hugo.scripter.co/][ox-hugo]] ~
