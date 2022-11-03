@@ -1,7 +1,6 @@
 ---
 title: "Search"
-searchform: true
-
+layout: "search"
+summary: "search"
+placeholder: "enter some keywords..."
 ---
-
-{{< search >}}

@@ -1,39 +1,114 @@
 ---
-baseurl: "https://renwenshan.github.io"
+baseurl: "https://www.rws-write.cc"
 title: "RWS Write"
-theme: "zen"
+copyright: "Copyright © 2022 Wenshan Ren"
+theme: "PaperMod"
+paginate: 12
 languageCode: "en-US"
 rssLimit: 36
 
-params:
-  cookieConsent: false
-  contact: "wenshan.ren@live.org"
-  copyright: "Copyright © 2022 Wenshan Ren"
-  dateformat: ""
-  description: "Wenshan Ren's Blog"
-  footer: ""
-  favicon: ""
-  icon: ""
-  image: ""
-  imageMaxWidth: "640"
-  jquery: true
-  logo: false
-  menuInHeader: true
-  mobileMenu: true
-  poweredby: false
-  realfavicongenerator: false
-  relatedposts: true
-  feedlinks: false
-  searchLimit: 1024
-  sidebar: true
-  submitted: true
+enableInlineShortcodes: true
+enableRobotsTXT: true
+buildDrafts: false
+buildFuture: false
+buildExpired: false
+enableEmoji: true
+pygmentsUseClasses: true
 
-outputFormats:
-  SearchIndex:
-    mediaType: "application/json"
-    baseName: "searchindex"
-    isPlainText: true
-    notAlternative: true
+minify:
+  disableXML: true
+  minifyOutput: true
 
 outputs:
-  home: ["HTML", "SearchIndex", "RSS"]
+  home:
+    - HTML
+    - RSS
+    - JSON
+
+params:
+  env: "production"
+  title: "RWS Write"
+  description: "Blog of Wenshan Ren"
+  author: "Wenshan Ren"
+  dateformat: "January 2, 2006"
+  defaultTheme: "light"
+  disableThemeToggle: true
+  hideFooter: false
+  ShowReadingTime: false
+  ShowShareButtons: false
+  ShowPostNavLinks: true
+  ShowBreadCrumbs: true
+  ShowCodeCopyButtons: true
+  ShowWordCount: true
+  ShowRssButtonInSectionTermList: true
+  ShowFullTextinRSS: true
+  UseHugoToc: true
+  disableSpecial1stPost: false
+  disableScrollToTop: false
+  comments: false
+  hidemeta: false
+  hideSummary: false
+  showtoc: true
+  tocopen: false
+
+  fuseOpts:
+    isCaseSensitive: false
+    shouldSort: true
+    location: 0
+    distance: 1000
+    threshold: 0.4
+    minMatchCharLength: 0
+    keys: ["title", "permalink", "summary", "content"]
+
+  homeInfoParams:
+    Title: "RWS Write"
+    Content: "Welcome to my website. I’m Wenshan Ren, and I post some technical stuff here, in English.<br />
+
+For my zh-CN blog, please visit https://wenshan.home.blog<br />
+<br />
+You can reach me via wenshan.ren@live.com ([**PGP KEY**](gpg.txt)) or other means shown below as icons.<br />
+<br />
+Always feel free to correct me if my facts or logic is flawed.<br />
+<br />
+"
+  socialIcons:
+  - name: "matrix"
+    url: https://matrix.to/#/@wenshan:matrix.org
+  - name: "telegram"
+    url: https://www.telegram.me/wenshan
+  - name: "github"
+    url: https://github.com/renwenshan
+
+menu:
+  main:
+    - identifier: rss
+      name: RSS
+      url: /index.xml
+      weight: 5
+    - identifier: categories
+      name: Categories
+      url: /categories/
+      weight: 10
+    - identifier: tags
+      name: Tags
+      url: /tags/
+      weight: 20
+    - identifier: archives
+      name: Archives
+      url: /archives/
+      weight: 30
+    - identifier: search
+      name: Search
+      url: /search/
+      weight: 40
+
+markup:
+  goldmark:
+    renderer:
+      unsafe: true
+
+  highlight:
+    codeFences: true
+    guessSyntax: true
+    lineNos: false
+    style: monokai
